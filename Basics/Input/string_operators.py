@@ -5,6 +5,6 @@ shield_level = int(input("Please enter the shield level.\n"))
 
 # Display the health message and ASCII art
 print("\nHealth has been set.\n")
-print("Lives:  " + "♥" * lives
-print("Energy: " + "♦" * energy_level
-print("Shield: " + "♦" * shield_level
+print("Lives:  " + "♥" * lives)
+print("Energy: " + "♦" * energy_level)
+print("Shield: " + "♦" * shield_level)

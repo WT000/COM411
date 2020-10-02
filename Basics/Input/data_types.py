@@ -10,5 +10,4 @@ weight = int(input("How much do you weigh (in kilograms)?\n"))
 # Calculation
 bmi = weight/(height**2)
 
-# Output
-print("Prins you are", str(age), "years old and your bmi is", str(bmi) + ".")
+print("{} you are {} years old and your BMI is {:.2f}".format(name, age, bmi))
