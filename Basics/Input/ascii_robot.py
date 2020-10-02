@@ -13,3 +13,5 @@ print("#  ####  #")
 print("   ####")
 print("   ####")
 print("    ##")
+
+#try .format with (beep_eye, beep_eye)
