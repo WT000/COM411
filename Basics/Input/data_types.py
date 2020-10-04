@@ -11,3 +11,7 @@ weight = int(input("How much do you weigh (in kilograms)?\n"))
 bmi = weight/(height**2)
 
 print("{} you are {} years old and your BMI is {:.2f}".format(name, age, bmi))
+
+# Explicit is int, we're specifically saying that the data must be a number. it KNOWS it's a number.
+
+# Implicit is the bmi calculation, we can only do math with int but it already knew they were numbers. It WORKS it out.

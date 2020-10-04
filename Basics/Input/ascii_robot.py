@@ -14,4 +14,4 @@ print("   ####")
 print("   ####")
 print("    ##")
 
-#try .format with (beep_eye, beep_eye)
+# This could have also been done with long quotes (just remember to use 3 quotes instead of just 1), try .format with (beep_eye, beep_eye)
