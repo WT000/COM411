@@ -1,13 +1,20 @@
-# go through each character similarly to membership file, use a for loop just like in there
-# when we pass x, we could add 1 to a counter or something
-# the counter would = 2 when we reach the second market meaning we know that we've just passed it, we can then end the loop
+# Ask the user for a sequence and then get the marker used within it
+user_sequence = input("Please enter a sequence:\n")
+marker = input("\nPlease enter the marker in the sequence:\n")
 
-# to look through characters, use the entered sequence and get the len of it (it will become the maximum number in the for loop)
+# Control variables
+mark_count = -1
+space = -1
 
-# counter = 0
+# Here, the loop will go through each character in the inputted sequence. Once we reach the users inputted marker, mark_count becomes 0, meaning it can now start adding to the spaces.
+for character in user_sequence:
+  if (character == marker):
+    mark_count += 1
+    if (mark_count >= 1):
+      break
+      # Now that mark_count has been reached again, we can break the loop and make the program a bit more efficient
+  if (mark_count == 0):
+    space += 1
 
-# for characters in range(0, len(user_input), 1):
-# if user_input[characters] = marker:
-# counter += 1
-# if counter >= 2
-# break
+# End result
+print("\nThe distance between the markers is {}".format(space))
