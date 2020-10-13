@@ -10,14 +10,14 @@ def calc_avg_weight(beep_weight, bop_weight):
 
 # A function that asks the user for the weights of the robots and then asks what they want to do with it
 def run():
-  beep_weight = int(input("What is the weight of Beep?\n"))
-  bop_weight = int(input("What is the weight of Bop?\n"))
+  beep_weight = float(input("What is the weight of Beep?\n"))
+  bop_weight = float(input("What is the weight of Bop?\n"))
 
   user_decision = input("What would you like to calculate (sum or average)\n")
 
-  if (user_decision == "sum"):
+  if (user_decision.lower() == "sum"):
     print(sum_weights(beep_weight, bop_weight))
-  elif (user_decision == "average"):
+  elif (user_decision.lower() == "average"):
     print(calc_avg_weight(beep_weight, bop_weight))
   else:
     print("ERROR: Please enter the word \"sum\" or \"average\"")
