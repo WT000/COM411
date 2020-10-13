@@ -1,12 +1,13 @@
-# Display escape characters
-print("\n Displays a new line")
-print("\t Displays a tab space")
-print("\\ Displays a back slash")
-print("\" Displays a double quote")
-print("\' Displays a single quote", "\n")
+def run():
+  # Display escape characters
+  print("\n Displays a new line")
+  print("\t Displays a tab space")
+  print("\\ Displays a back slash")
+  print("\" Displays a double quote")
+  print("\' Displays a single quote", "\n")
 
-print("\tI am Beep!")
+  print("\tI am Beep!")
 
-# Use 'this' instead of "this" and you can use quotes in a string without needing to do \" or \'!
+  # Use 'this' instead of "this" and you can use quotes in a string without needing to do \" or \'!
 
-print("\n\t\t\"I am beep!\"")
+  print("\n\t\t\"I am beep!\"")
