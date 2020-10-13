@@ -7,5 +7,6 @@ def cross_bridge(steps):
   else:
     print("We must keep going!")
 
+# Call the function
 cross_bridge(3)
 cross_bridge(6)
