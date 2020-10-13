@@ -1,4 +1,5 @@
 # Ladder function with steps parameter, it will display an ASCII ladder (steps) amount of times
+# once again, we only need in range(steps)
 def display_ladder(steps):
   for i in range(0, steps, 1):
     print("| |")
