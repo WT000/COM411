@@ -9,14 +9,9 @@ def run():
   print("Moving...")
   movement = movements()
 
-  x = 0
-  y = 1
-
   for count in range(len(movement)):
     if (count % 2 == 0): # This makes it print the right amount (4)
-      print("{} for {} steps".format(movement[x], movement[y]))
-      x += 2
-      y += 2
+      print("{} for {} steps".format(movement[count], movement[count+1]))
 
 # Call the function
 run()
