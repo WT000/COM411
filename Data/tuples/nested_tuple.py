@@ -6,16 +6,16 @@ def steps():
 # Create good and bad lists, if a tuple within steps() fits the bad
 # criteria, add it to the bad list. Else, add to good.
 def run():
-  likelihoods = steps()
+  likelihood_list = steps()
   good = []
   bad = []
   
-  for step in likelihoods:
-    if (step[1] >= 50):
-      bad.append(step)
+  for tuples in likelihood_list:
+    if (tuples[1] >= 50): # Goes through the tuples inside the list and looks at position 1 within them (the numbers)
+      bad.append(tuples)
     else:
-      good.append(step)
-    
+      good.append(tuples)
+  
   # Print the results
   print("Good steps: {}, Bad steps: {}\n".format(len(good), len(bad)))
   
