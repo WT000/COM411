@@ -28,7 +28,7 @@ def search(fileDirectory):
 
 # Run function which calls the search function with a directory
 def run():
-  search("Data/files/txt/locations.txt")
+  books = search("Data/files/txt/locations.txt")
 
 # Run the program
 run()
