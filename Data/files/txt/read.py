@@ -17,8 +17,14 @@ def search(fileDirectory):
   print("Searching...")
   with open(fileDirectory) as file:
     for line in file:
+      print("Looked in {}".format(line[:-1]))
       print("Looked in {}".format(line), end="")
     print()
+  
+  # or this could go inside
+  #lines = file.read().split("\n")
+  #for line in lines:
+    #print(line)
 
 # Run function which calls the search function with a directory
 def run():
