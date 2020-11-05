@@ -1,0 +1,5 @@
+name=Destroyer
+health=400
+defence=20
+stamina=300
+weapon=Greatsword
