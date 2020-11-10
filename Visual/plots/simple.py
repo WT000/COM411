@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 # Display function which takes two parameters, the x list and y list
 def display(x_list, y_list):
   plt.plot(x_list, y_list)
+  plt.xlabel("x border")
+  plt.ylabel("y border")
   plt.show()
 
 # Run function which takes no parameters, it asks the user to
