@@ -7,7 +7,7 @@ def small():
   x_list = [3, 3, 4, 4, 3]
   y_list = [3, 4, 4, 3, 3]
 
-  plt.plot(x_list, y_list, "ro--")
+  plt.plot(x_list, y_list, "ro:")
 
 # Medium square function which draws a medium green square with
 # dashed lines and square points
