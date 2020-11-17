@@ -9,7 +9,7 @@ def read_data(file_path):
     data = []
     
     for line in file:
-      line = line.strip()
+      line = float(line.strip())
       data.append(line)
     
     return data
@@ -20,14 +20,15 @@ def run():
   data = read_data("Visual/subplots/temps.txt")
 
   # Create the subplots which share the same x axis
-  fig, axs = plt.subplots(2, sharex="all")
+  fig, axs = plt.subplots(1, 2, sharex="all")
 
   # Figure title
   fig.suptitle("Temperature Data")
   
   # Plot the two pieces of data in different formats
-  axs[0].plot(data, "bo-")
-  axs[1].bar(range(len(data)), data)
+  axs[0].plot(range(1, 8), data, "bo-")
+  axs[1].bar(range(1, 8), data)
+  plt.tight_layout()
   
   # Show the plot now that it's created
   plt.show()
