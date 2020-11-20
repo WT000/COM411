@@ -45,5 +45,5 @@ def run():
   fig.tight_layout()
   plt.show()
 
-# Run the program 
+# Run the program
 run()
