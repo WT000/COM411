@@ -58,12 +58,12 @@ def run():
   
   for age in age_set:
     death_count = 0
-    axes[1].bar(age, age_list.count(age), color="g")
 
     for count in range(len(age_list)):
       if (survived_list[count] == 0 and age_list[count] == age):
         death_count += 1
 
+    axes[1].bar(age, age_list.count(age), color="g")
     axes[1].bar(age, death_count, color="r")
 
   axes[1].set_xlabel("Age")
