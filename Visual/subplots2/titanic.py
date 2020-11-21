@@ -37,7 +37,7 @@ def run():
   fig.suptitle("Titanic Data Analysis")
 
   ### THE DIFFERENT CLASSES ON TITANIC AND THEIR DEATHS ###
-  print("Loading Class and Death comparison...")
+  print("\nLoading Class and Death comparison...")
   for class_loop in range(3):
     total_deaths = 0
     
@@ -54,13 +54,12 @@ def run():
 
   ### THE DIFFERENT AGES ON TITANIC AND THEIR DEATHS ###
   print("Loading Age and Death comparison...")
-  for age in age_list:
-    axes[1].bar(age, age_list.count(age), color="g")
   age_set = set(age_list)
   
   for age in age_set:
     death_count = 0
-    
+    axes[1].bar(age, age_list.count(age), color="g")
+
     for count in range(len(age_list)):
       if (survived_list[count] == 0 and age_list[count] == age):
         death_count += 1
