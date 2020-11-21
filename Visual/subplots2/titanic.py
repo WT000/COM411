@@ -38,15 +38,15 @@ def run():
 
   ### THE DIFFERENT CLASSES ON TITANIC AND THEIR DEATHS ###
   print("\nLoading Class and Death comparison...")
-  for class_loop in range(3):
+  for class_loop in range(1, 4):
     total_deaths = 0
     
     for count in range(len(survived_list)):
-      if (survived_list[count] == 0 and class_list[count] == class_loop + 1):
+      if (survived_list[count] == 0 and class_list[count] == class_loop):
         total_deaths += 1
     
-    axes[0].bar(class_loop+1, class_list.count(class_loop+1), color="g")
-    axes[0].bar(class_loop+1, total_deaths, color="r")
+    axes[0].bar(class_loop, class_list.count(class_loop), color="g")
+    axes[0].bar(class_loop, total_deaths, color="r")
 
   axes[0].set_xlabel("Class")
   axes[0].set_ylabel("No. People")
