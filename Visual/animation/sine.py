@@ -23,8 +23,7 @@ def animate(frame):
   # then use the np.sin function on the result of this calculation,
   # the returned value will be the y value
   x_values = np.arange(0, frame)
-  degrees = x_values * (np.pi / 180)
-  y_values = np.sin(degrees)
+  y_values = np.sin(x_values * (np.pi / 180))
 
   axes.plot(x_values, y_values, "k")
 
