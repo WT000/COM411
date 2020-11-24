@@ -32,7 +32,8 @@ def animate(frame):
 def run():
   # Like the previous programs, we specify that fig is a global
   # variable and use this for the animation, then we set the frames
-  # to 720 with an interval of 100 milliseconds
+  # to 720 with an interval of 100 milliseconds and then show
+  # the fig
   global fig
   sine_animation = animation.FuncAnimation(fig, animate, frames=720, interval=100)
 
