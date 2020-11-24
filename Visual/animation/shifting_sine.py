@@ -24,10 +24,12 @@ def animate(frame):
 
 # Run function which takes no parameter
 def run():
+  # Specify that fig is a global variable and then run the animation
   # Specify that fig is a global variable and the
   global fig
   sine_animation = animation.FuncAnimation(fig, animate, frames=720, interval=100)
 
   plt.show()
 
+# Run the program
 run()
