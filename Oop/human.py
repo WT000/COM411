@@ -20,7 +20,7 @@ class Human:
 
   def eat(self, amount):
     temp = self.energy + amount
-
+    # or if (amount + self.energy > MAX_ENERGY)
     if (temp > 100):
       print("I'm full, I can't eat more!")
       self.energy = 100
@@ -54,3 +54,4 @@ if (__name__ == "__main__"):
   print(human)
   human.eat(100)
   print(human)
+  print(repr(human))

@@ -4,7 +4,7 @@ class Robot:
   # A class attribute, shared by every object
   LAWS = "Protect, Obey and Survive"
     
-  def the_laws():  
+  def the_laws(self):
     print(Robot.LAWS)
 
   # Initialise method which will run whenever the class is called
@@ -41,6 +41,8 @@ if (__name__ == "__main__"):
   beep = Robot("Beep")
   beep.display()
 
-  Robot.the_laws()
+  print(Robot.LAWS)
+  beep.the_laws()
 
   print(beep)
+  print(repr(beep))
