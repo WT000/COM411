@@ -2,9 +2,10 @@
 class Robot:
 
   # A class attribute, shared by every object
-  def the_laws():
-    LAWS = "Protect, Obey and Survive"
-    print(LAWS)
+  LAWS = "Protect, Obey and Survive"
+    
+  def the_laws():  
+    print(Robot.LAWS)
 
   # Initialise method which will run whenever the class is called
   # Default values are provided if nothing is given
