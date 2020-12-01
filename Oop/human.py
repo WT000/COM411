@@ -5,11 +5,11 @@ class Human:
   MAX_ENERGY = 100
 
   # Initialiser
-  def __init__(self, name="Human", age=0, energy=MAX_ENERGY):
+  def __init__(self, name="Human", age=0):
     # Instance attributes
     self.name = name
     self.age = age
-    self.energy = energy
+    self.energy = Human.MAX_ENERGY
 
   # Methods
   def display(self):

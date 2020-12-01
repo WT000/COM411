@@ -12,4 +12,4 @@ class Universe:
       # add a random number of humans and robots
       # add the planet to the planets list
 
-      # perhaps make planet return a tuple with the no of robots and humans, these can then be directly used for x and y
+      # get the len of the planet directly from humans
