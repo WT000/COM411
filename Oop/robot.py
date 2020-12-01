@@ -32,7 +32,7 @@ class Robot:
 
   # Commonly used to display the attributes of a specific object
   def __str__(self):
-    return "My name is {} and I am {} years old.".format(self.name, self.age)
+    return self.name
 
 # If the name of the file is main, it means this is the running file,
 # execute the test code

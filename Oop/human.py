@@ -38,12 +38,12 @@ class Human:
 
   # Debugging output
   def __repr__(self):
-    return "human(name={}, age={}, energy={}".format(self.name, self.age, self.energy)
+    return "human(name={}, age={}, energy={})".format(self.name, self.age, self.energy)
 
   # String output
   def __str__(self):
-    return "My name is {}, my age is {} and my energy is {}!".format(self.name, self.age, self.energy)
-
+    return self.name
+    
 if (__name__ == "__main__"):
   human = Human("Will")
   print(human)
