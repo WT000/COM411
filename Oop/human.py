@@ -19,21 +19,23 @@ class Human:
     self.age += 1
 
   def eat(self, amount):
-    self.energy += amount
+    temp = self.energy + amount
 
-    if (self.energy > 100):
+    if (temp > 100):
       print("I'm full, I can't eat more!")
-      self.energy = MAX_ENERGY
+      self.energy = 100
     else:
+      self.energy = temp
       print("Yum!")
 
   def move(self, distance):
-    self.energy -= distance
+    temp = self.energy - distance
 
-    if (self.energy < 0):
+    if (temp < 0):
       print("I'm too tired to keep walking!")
       self.energy = 0
     else:
+      self.energy = temp
       print("That was a nice walk!")
 
   # Debugging output
