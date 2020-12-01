@@ -9,7 +9,6 @@ class Robot:
   # Initialise method which will run whenever the class is called
   # Default values are provided if nothing is given
   def __init__(self, name="Robot", age=0):
-
     # Attributes of the robot objects
     self.name = name
     self.age = age
@@ -17,6 +16,15 @@ class Robot:
   # An additional method which is used to display the name
   def display(self):
     print("I am {}!".format(self.name))
+
+  def grow(self):
+    self.age += 1
+
+  def eat(self, amount):
+    print("I'm a robot, I cannot eat {} food.".format(amount))
+
+  def move(self, distance):
+    print("Moved {}, I'm a robot with infinite energy.".format(distance))
 
   # Used mostly for debugging
   def __repr__(self):

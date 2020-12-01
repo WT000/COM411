@@ -11,9 +11,30 @@ class Human:
     self.age = age
     self.energy = energy
 
-  # Method
+  # Methods
   def display(self):
     print("I am {}".format(self.name))
+
+  def grow(self):
+    self.age += 1
+
+  def eat(self, amount):
+    self.energy += amount
+
+    if (self.energy > 100):
+      print("I'm full, I can't eat more!")
+      self.energy = MAX_ENERGY
+    else:
+      print("Yum!")
+
+  def move(self, distance):
+    self.energy -= distance
+
+    if (self.energy < 0):
+      print("I'm too tired to keep walking!")
+      self.energy = 0
+    else:
+      print("That was a nice walk!")
 
   # Debugging output
   def __repr__(self):
@@ -25,5 +46,9 @@ class Human:
 
 if (__name__ == "__main__"):
   human = Human("Will")
-  human.display()
+  print(human)
+
+  human.move(101)
+  print(human)
+  human.eat(100)
   print(human)
