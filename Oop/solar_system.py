@@ -14,9 +14,9 @@ class Solar_System:
   # random amount of planets and append a random amount of humans
   # and robots to each planet
   def generate(self):
-    for count in range(randint(1, 5)):
+    for count in range(randint(1, 4)):
       # Create a planet object
-      count = Planet("Planet-{}".format(count))
+      count = Planet("Planet-{}".format(count+1))
 
       # Add a random amount of people and robots to the planet
       for person in range(randint(0, 5)):
@@ -35,14 +35,20 @@ class Solar_System:
       print(planet)
       print()
 
+# Visulaise function which will visualise the planets in a solar 
+# system, to do this it creates axes with a
   def visualise(self):
-    fig, axes = plt.subplots(1, len(self.planets), sharex="all", sharey="all")
+    fig, axes = plt.subplots(1, len(self.planets), sharey="all")
     
     for planet in range(len(self.planets)):
-      axes[planet].bar(1, len(self.planets[planet].inhabitants["humans"]))
-      axes[planet].bar(2, len(self.planets[planet].inhabitants["robots"]))
+      axes[planet].bar(1, len(self.planets[planet].inhabitants["humans"]), color="b")
+      axes[planet].bar(2, len(self.planets[planet].inhabitants["robots"]), color="r")
 
-    fig, axes = plt.subplots(len(self.planets), 1)
+      axes[planet].set_xticks([1, 2])
+      axes[planet].set_xticklabels(["Humans", "Robots"])
+      axes[planet].set_title("Planet-{}".format(planet+1))
+
+    plt.tight_layout()
     plt.show()
 
   def __repr__(self):
