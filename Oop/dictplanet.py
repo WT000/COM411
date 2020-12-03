@@ -36,6 +36,9 @@ class Planet:
     else:
       print("The robot doesn't exist")
 
+  def __repr__(self):
+    return "{}=(humans={}, robots={})".format(self.planet, self.inhabitants["humans"], self.inhabitants["robots"])
+  
   def __str__(self):
     return "### {} ### \nHumans: {} \nRobots: {}".format(self.planet, self.inhabitants["humans"], self.inhabitants["robots"])
 

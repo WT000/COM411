@@ -4,8 +4,9 @@ from robot import Robot
 
 # Planet class which will hold the human and robot data
 class Planet:
-  def __init__(self):
+  def __init__(self, name):
     # Empty humans and robots lists which will hold the objects
+    self.name = name
     self.humans = []
     self.robots = []
 
@@ -37,10 +38,10 @@ class Planet:
     return ""
 
   def __str__(self):
-    return "Humans: {} \nRobots: {}".format(self.humans, self.robots)
+    return "### {} ### \nHumans: {} \nRobots: {}".format(self.name, self.humans, self.robots)
 
 if (__name__ == "__main__"):
-  homeworld = Planet()
+  homeworld = Planet("Homeworld")
 
   human1 = Human("Will")
   human2 = Human("John")
