@@ -7,10 +7,8 @@ class Human(Inhabitant):
   def __init__(self, name="Human", age=0):
     # By using super(), we now run the __init__ function inside the inhabitant class, which
     # allows us to run eat() and move() within this class, even though it's not here!
-    super().__init__()
+    super().__init__(name, age)
     # Once done, we now overwrite the name and age with the ones specified by the user
-    self.name = name
-    self.age = age
 
   # Sub class method which only humans can do
   def display(self):

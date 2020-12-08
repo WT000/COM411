@@ -9,9 +9,7 @@ class Robot(Inhabitant):
   def __init__(self, name="Robot", age=0):
     # By using super(), we now run the __init__ function inside the inhabitant class, which
     # allows us to run eat() and move() within this class, even though it's not here!
-    super().__init__()
-    self.name = name
-    self.age = age
+    super().__init__(name, age)
 
   # This method is unique to robots, that being to print the robot laws
   def the_laws(self):
