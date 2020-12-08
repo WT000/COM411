@@ -1,6 +1,11 @@
-# Import dictplanet for the planets and random for random number
-# gen
-from dictplanet import Planet
+# Import human, robot and planet classes for creating the
+# planets and inhabitants
+from human import Human
+from robot import Robot
+from planet import Planet
+
+# Import random for random numbers and matplotlib for
+# plotting
 from random import randint
 import matplotlib.pyplot as plt
 
@@ -20,10 +25,14 @@ class Solar_System:
 
       # Add a random amount of people and robots to the planet
       for person in range(randint(0, 5)):
-        count.inhabitants["humans"].append("Human-{}".format(person))
+        name = "Human-{}".format(person)
+        age = randint(0, 120)
+        count.inhabitants.append(Human(name, age))
 
       for robot in range(randint(0, 5)):
-        count.inhabitants["robots"].append("Robot-{}".format(robot))
+        name = "Robot-{}".format(robot)
+        age = randint(0, 120)
+        count.inhabitants.append(Robot(name, age))
       
       # Append the finished planet to the planets in the solar system
       self.planets.append(count)
@@ -44,8 +53,11 @@ class Solar_System:
     fig, axes = plt.subplots(1, len(self.planets), sharey="all")
     
     for planet in range(len(self.planets)):
-      axes[planet].bar(1, len(self.planets[planet].inhabitants["humans"]), color="b")
-      axes[planet].bar(2, len(self.planets[planet].inhabitants["robots"]), color="r")
+      data = self.planets[planet].count_inhabitants()
+
+      axes[planet].bar(1, data[0], color="b")
+
+      axes[planet].bar(2, data[1], color="r")
 
       axes[planet].set_xticks([1, 2])
       axes[planet].set_xticklabels(["Humans", "Robots"])

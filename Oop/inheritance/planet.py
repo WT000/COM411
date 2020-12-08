@@ -30,7 +30,6 @@ class Planet:
       else:
         total_robots += 1
     
-    print("There are {} humans and {} robots.".format(total_humans, total_robots))
     return total_humans, total_robots
 
   def __repr__(self):
