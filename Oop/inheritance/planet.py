@@ -27,7 +27,7 @@ class Planet:
     for inhabitant in self.inhabitants:
       if isinstance(inhabitant, Human):
         total_humans += 1
-      else:
+      elif isinstance(inhabitant, Robot):
         total_robots += 1
     
     return total_humans, total_robots

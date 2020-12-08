@@ -55,13 +55,23 @@ class Solar_System:
     for planet in range(len(self.planets)):
       data = self.planets[planet].count_inhabitants()
 
-      axes[planet].bar(1, data[0], color="b")
+      if (len(self.planets) > 1):
+        axes[planet].bar(1, data[0], color="b")
 
-      axes[planet].bar(2, data[1], color="r")
+        axes[planet].bar(2, data[1], color="r")
 
-      axes[planet].set_xticks([1, 2])
-      axes[planet].set_xticklabels(["Humans", "Robots"])
-      axes[planet].set_title("Planet-{}".format(planet+1))
+        axes[planet].set_xticks([1, 2])
+        axes[planet].set_xticklabels(["Humans", "Robots"])
+        axes[planet].set_title("Planet-{}".format(planet+1))
+      
+      else:
+        axes.bar(1, data[0], color="b")
+
+        axes.bar(2, data[1], color="r")
+
+        axes.set_xticks([1, 2])
+        axes.set_xticklabels(["Humans", "Robots"])
+        axes.set_title("Planet-{}".format(planet+1))
 
     plt.tight_layout()
     plt.show()
