@@ -29,6 +29,8 @@ class Planet:
         total_humans += 1
       else:
         total_robots += 1
+    
+    print("There are {} humans and {} robots.".format(total_humans, total_robots))
 
   def __repr__(self):
     return "{}=(inhabitants={})".format(self.planet, self.inhabitants)
@@ -53,6 +55,7 @@ if (__name__ == "__main__"):
 
   homeworld.add_inhabitant(robot1)
   homeworld.add_inhabitant(robot2)
-  homeworld.remove_inhabitant(robot2)
 
   print(homeworld)
+
+  homeworld.count_inhabitants()
