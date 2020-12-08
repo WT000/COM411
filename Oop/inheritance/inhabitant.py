@@ -1,6 +1,9 @@
+# The Inhabitant class will be the super class for Human and Robot, it will share common
+# methods between them which are similar to the ones from last week.
 class Inhabitant:
   MAX_ENERGY = 100
 
+  # When specifying a global variable inside __init__, we'd do something like MAX_ENERGY=100 
   def __init__(self, name="Inhabitant", age=0):
     self.name = name
     self.age = age
