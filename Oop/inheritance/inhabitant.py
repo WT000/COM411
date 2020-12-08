@@ -34,7 +34,7 @@ class Inhabitant:
       print("I made it to the destination! My energy is now {}".format(self.energy))
 
   def __str__(self):
-    return "My name is {} and I'm {}. My current energy is {}".format(self.name, self.age, self.energy)
+    return self.name
 
   def __repr__(self):
     return "inhabitant=(name={}, age={}, energy={})".format(self.name, self.age, self.energy)

@@ -17,9 +17,7 @@ class Robot(Inhabitant):
   def the_laws(self):
     print(Robot.LAWS)
 
-  # Override the __str__ and __repr__ magic methods
-  def __str__(self):
-    return "Greetings. I am a robot named {}. I have existed for {} years. My energy {}.".format(self.name, self.age, self.energy)
+  # Override the __repr__ magic method, __str__ is fine
 
   def __repr__(self):
     return "robot=(name={}, age={}, energy={})".format(self.name, self.age, self.energy)

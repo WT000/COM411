@@ -16,9 +16,7 @@ class Human(Inhabitant):
   def display(self):
     print("Hello! My name is {} and I'm a human!".format(self.name))
 
-  # Overwrite the __str__ and __repr__ magic methods
-  def __str__(self):
-    return "My name is {} and I'm a human, I'm currently {} with an energy of {}.".format(self.name, self.age, self.energy)
+  # Overwrite the __repr__ magic method, __str__ is fine
 
   def __repr__(self):
     return "human=(name={}, age={}, energy={})".format(self.name, self.age, self.energy)
