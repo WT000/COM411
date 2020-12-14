@@ -1,6 +1,8 @@
+from abc import ABC, abstractmethod
+
 # The Inhabitant class will be the super class for Human and Robot, it will share common
 # methods between them which are similar to the ones from last week.
-class Inhabitant:
+class Inhabitant(ABC):
   MAX_ENERGY = 100
 
   # When specifying a global variable inside __init__, we'd do something like MAX_ENERGY=100 
@@ -32,6 +34,10 @@ class Inhabitant:
     else:
       self.energy = temp
       print("I made it to the destination! My energy is now {}".format(self.energy))
+
+  @abstractmethod
+  def speak(self):
+    pass
 
   def __str__(self):
     return self.name

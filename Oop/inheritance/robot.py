@@ -15,6 +15,9 @@ class Robot(Inhabitant):
   def the_laws(self):
     print(Robot.LAWS)
 
+  def speak(self):
+    print("I am robot!")
+
   # Override the __repr__ magic method, __str__ is fine
 
   def __repr__(self):
